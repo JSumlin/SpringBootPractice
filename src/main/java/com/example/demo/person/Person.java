@@ -1,0 +1,29 @@
+package com.example.demo.person;
+
+import javax.persistence.*;
+
+@Entity
+@Table
+public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "person_name")
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
