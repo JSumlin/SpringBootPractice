@@ -20,4 +20,8 @@ public class PersonService {
     public List allPeople(){
         return personRepository.findAll();
     }
+
+    public void addNewPerson(Person person) {
+        System.out.println(person);
+    }
 }
