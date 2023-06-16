@@ -22,7 +22,5 @@ public class PersonController {
     }
 
     @PostMapping
-    public void printPeople(@RequestBody Person person){
-        personService.addNewPerson(person);
-    }
+    public void printPeople(@RequestBody Person person) { personService.addNewPerson(person); }
 }
