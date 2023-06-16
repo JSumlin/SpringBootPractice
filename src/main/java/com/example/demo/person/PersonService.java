@@ -16,12 +16,11 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
-    @GetMapping
     public List allPeople(){
         return personRepository.findAll();
     }
 
     public void addNewPerson(Person person) {
-        System.out.println(person);
+        personRepository.save(person);
     }
 }
